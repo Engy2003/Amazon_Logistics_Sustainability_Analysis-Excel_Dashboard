@@ -1,6 +1,6 @@
 # 📦 Amazon Logistics Analysis: Resolving the Speed vs. Sustainability Conflict
 
-![Dashboard Banner](Dashboard.png)
+![Dashboard Banner](https://github.com/Engy2003/Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard/blob/main/Images/Dashboard.png)
 
 ## 📌 The Strategic Challenge
 Amazon faces a critical operational paradox that has grown over the last decade: **Operational Speed vs. Environmental Sustainability**. While the company aims for **Net-Zero Carbon by 2040** (The Climate Pledge), balancing hyper-growth with decarbonization remains a massive hurdle.
@@ -31,7 +31,7 @@ Before visualizing the data, I used Machine Learning to understand *why* delays 
 
 | Feature Importance | Model Evaluation |
 | :---: | :---: |
-| ![Time Drivers](First_Model_Field_Importances.png) | ![Time Eval](Evaluation_First_Model.png) |
+| ![Time Drivers](https://github.com/Engy2003/Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard/blob/main/Images/First_Model_Field_Importances.png) | ![Time Eval](https://github.com/Engy2003/Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard/blob/main/Images/Evaluation_First_Model.png) |
 | *Category & Agent Rating drive speed more than Distance.* | *High accuracy with MAE ~16.9 mins.* |
 
 ### 2️⃣ The "Sustainability" Model (Emissions)
