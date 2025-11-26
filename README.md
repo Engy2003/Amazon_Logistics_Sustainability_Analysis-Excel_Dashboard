@@ -41,7 +41,7 @@ Before visualizing the data, I used Machine Learning to understand *why* delays 
 
 | Feature Importance | Model Evaluation |
 | :---: | :---: |
-| ![Emission Drivers](Second_Model_Field_Importances.png) | ![Emission Eval](Evaluation_Second_Model.png) |
+| ![Emission Drivers](https://github.com/Engy2003/Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard/blob/main/Images/Second_Model_Field_Importances.png) | ![Emission Eval](https://github.com/Engy2003/Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard/blob/main/Images/Evaluation_Second_Model.png) |
 | *Emissions are a pure function of Vehicle & Distance.* | *Validates the proxy variable logic.* |
 
 ---
