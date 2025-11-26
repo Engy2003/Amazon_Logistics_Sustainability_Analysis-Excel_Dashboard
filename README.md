@@ -77,5 +77,5 @@ Based on this data-driven analysis, I propose three actionable strategies for Am
 If you found this analysis interesting, I'd love to discuss it further.
 
 * **Name:** Engy Saeed
-* **LinkedIn:** [Engy Saeed](https://www.linkedin.com/in/engy-saeed2003/)
+* **LinkedIn:** [https://www.linkedin.com/in/engy-saeed2003/](https://www.linkedin.com/in/engy-saeed2003/)
 * **Email:** engysead498@gmail.com
