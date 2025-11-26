@@ -1,2 +1,81 @@
-# Amazon_Logistics_Sustainability_Analysis-Excel_Dashboard
-End-to-end data analysis project analyzing 43k+ Amazon orders to optimize last-mile delivery. Utilized Excel Power Query for ETL, BigML for predictive modeling (Decision Trees), and Excel Dashboards to visualize the trade-off between Speed and Carbon Emissions.
+# 📦 Amazon Logistics Analysis: Resolving the Speed vs. Sustainability Conflict
+
+![Dashboard Banner](Dashboard.png)
+
+## 📌 The Strategic Challenge
+Amazon faces a critical operational paradox that has grown over the last decade: **Operational Speed vs. Environmental Sustainability**. While the company aims for **Net-Zero Carbon by 2040** (The Climate Pledge), balancing hyper-growth with decarbonization remains a massive hurdle.
+
+**The Analysis Scope:**
+This project utilizes a **dataset from 2022** containing **43,739 delivery records** to investigate the root causes of this conflict. While this dataset represents a specific historical snapshot, it provides a valuable "micro-cosmos" to model the mechanics of last-mile logistics.
+
+**The Goal:** To analyze this operational data to uncover the hidden trade-offs between delivery speed and carbon footprint, providing data-driven strategies that remain relevant for future network optimization.
+
+---
+
+## 🛠️ Solution Architecture
+To derive insights from this dataset, I built an end-to-end analytics pipeline:
+
+* [cite_start]**ETL & Engineering:** Utilized **Excel Power Query (M-Code)** to build a repeatable data cleaning pipeline, solving complex temporal issues (midnight crossing) and engineering geospatial metrics (Haversine Formula)[cite: 39, 62].
+* [cite_start]**Predictive Modeling (AI):** Deployed **BigML** (Decision Trees) to identify the mathematical drivers of Speed and Emissions, pivoting away from traditional statistical tools to handle real-world noise (Traffic/Weather)[cite: 78].
+* [cite_start]**Business Intelligence:** Synthesized findings into an interactive **Excel Dashboard** for strategic decision-making[cite: 245].
+
+---
+
+## 🤖 Phase 1: AI-Driven Root Cause Analysis
+Before visualizing the data, I used Machine Learning to understand *why* delays and emissions happen.
+
+### 1️⃣ The "Speed" Model (Efficiency)
+* **Question:** What actually drives delivery time? Is it just distance?
+* **Answer:** The model (**R² = 0.82**) revealed a surprise. **Distance (10%)** is a minor factor. [cite_start]The primary driver is **Category (28.5%)**[cite: 80, 81].
+* [cite_start]**Insight:** "Grocery" deliveries are hyper-optimized (avg 26 mins), while "Cosmetics" face massive operational bottlenecks (avg 132 mins)[cite: 268].
+
+| Feature Importance | Model Evaluation |
+| :---: | :---: |
+| ![Time Drivers](First_Model_Field_Importances.png) | ![Time Eval](Evaluation_First_Model.png) |
+| *Category & Agent Rating drive speed more than Distance.* | *High accuracy with MAE ~16.9 mins.* |
+
+### 2️⃣ The "Sustainability" Model (Emissions)
+* **Question:** Can we isolate the exact source of emissions?
+* **Answer:** The model achieved a **Perfect R² (1.00)**.
+* **Validation Logic:** This is **not** overfitting; it is a validation of the data engineering process. [cite_start]It proves that the AI successfully "reverse-engineered" the proxy variable logic, confirming that emissions are driven 100% by **Distance** and **Vehicle Choice**, with zero noise from external factors like weather[cite: 82, 160].
+
+| Feature Importance | Model Evaluation |
+| :---: | :---: |
+| ![Emission Drivers](Second_Model_Field_Importances.png) | ![Emission Eval](Evaluation_Second_Model.png) |
+| *Emissions are a pure function of Vehicle & Distance.* | *Validates the proxy variable logic.* |
+
+---
+
+## 📊 Phase 2: The Data Story & Findings
+Visualizing the AI findings revealed the core conflict and the solution.
+
+### 📉 The Conflict: Dirty Speed vs. Clean Slowness
+[cite_start]The dashboard highlights the trade-off[cite: 273, 274]:
+* **The Van:** Fastest vehicle (Avg 116 min) ➔ **Highest Polluter (21,588g CO2/trip).**
+* **The Bicycle:** Zero Emissions (0g CO2) ➔ **Slower (Avg 127 min).**
+
+### 🚦 The "Golden Scenario" (The Solution)
+While Vans are faster on average, the data shows they are extremely vulnerable to congestion.
+* [cite_start]In **"Jam" Traffic**, Van efficiency drops by **45.8%**[cite: 328].
+* [cite_start]**Critical Finding:** In high-density Metropolitan jams, the **Bicycle** becomes competitive on speed while remaining 100% sustainable[cite: 336].
+
+### ⏳ Hidden Bottlenecks
+* [cite_start]The analysis identified a non-logistical delay: An average of **12.20 minutes** is lost in `Preparation_Time` at the store before the driver even begins the journey[cite: 331].
+
+---
+
+## 🚀 Strategic Recommendations
+Based on this data-driven analysis, I propose three actionable strategies for Amazon:
+
+1.  **Dynamic "Green" Routing:** Abandon the static dispatch model. Use AI to deploy **Bicycles** specifically in Metropolitan areas during **Rush Hour (Jam)**. [cite_start]In this scenario, they are the optimal vehicle: fastest *and* cleanest[cite: 354].
+2.  **Replicate the "Grocery" Blueprint:** The data proves the "Grocery" supply chain is 5x faster than "Cosmetics." [cite_start]Amazon should apply the operational workflows from Grocery to lagging categories[cite: 363].
+3.  **Customer-Facing Sustainability:** Leverage the data at checkout. [cite_start]Offer a "Green Choice": *"Get it by 5 PM (Bicycle) and save 21kg of CO2."* This turns sustainability from a cost center into a customer loyalty feature[cite: 359].
+
+---
+
+## 📬 Contact
+If you found this analysis interesting, I'd love to discuss it further.
+
+* **Name:** [Engy Saeed]
+* **LinkedIn:** [https://www.linkedin.com/in/engy-saeed2003/](https://www.linkedin.com/in/engy-saeed2003/)
+* **Email:** `engysead498@gmail.com`
